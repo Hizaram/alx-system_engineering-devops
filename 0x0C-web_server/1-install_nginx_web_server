@@ -10,15 +10,18 @@ SERVER_CONFIG=\
 "server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
-	root /var/www/html;
+
+	root /var/www/index.html/html;
 	index index.html index.htm index.nginx-debian.html;
+
 	server_name _;
+
 	location / {
 		try_files \$uri \$uri/ =404;
 	}
 }"
 
-bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-enabled/default"
+bash -c "echo -e '$SERVER_CONFIG' > /etc/nginx/sites-available/default"
 
 if [ "$(pgrep -c nginx)" -le 0 ]; then
 	service nginx start
