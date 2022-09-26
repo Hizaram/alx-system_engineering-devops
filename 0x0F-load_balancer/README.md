@@ -16,7 +16,7 @@ configure and start it. We'll be dealing with HAproxy
       + The value of the custom HTTP header must be the hostname of the server Nginx is running on.
     + If your server's hostnames are not properly configured (`[STUDENT_ID]-web-01` and `[STUDENT_ID]-web-02`), follow this [tutorial](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/set-hostname.html).
 
-+ [x] 1\. Install your load balancer<br/>_**[0-install_load_balancer](0-install_load_balancer)**_ contains a Bash script that installs and configures HAproxy on the `lb-01` server.
++ [x] 1\. Install your load balancer<br/>_**[1-install_load_balancer](1-install_load_balancer)**_ contains a Bash script that installs and configures HAproxy on the `lb-01` server.
   + Requirements:
     + Configure HAproxy with a version equal or greater than 1.5 so that it sends traffic to `web-01` and `web-02`.
     + Distribute requests using a roundrobin algorithm.
